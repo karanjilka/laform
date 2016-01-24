@@ -1,0 +1,26 @@
+{
+    "name": "Karan/laform",
+    "description": "Laravel form builder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karan Jilka",
+            "email": "jilkakaran@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "laravelcollective/html": "5.*",
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Karan\\Laform\\": "src/"
+        },
+        "classmap": [
+
+        ],
+    },
+    "minimum-stability": "stable"
+}
