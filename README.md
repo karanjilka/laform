@@ -46,3 +46,53 @@ Examples
 
 {!! Laform::close() !!}
 ```
+#Available common attributes Array
+```php
+[    
+    //field value (use to set field value) - string/array (depends upon field type)
+    'value' => '' // default is null
+
+    //field attributes - array
+    'attr' => [] // default is empty array
+
+    //lable text - string
+    'lable'   => '' // no default value, if not set lavle will not be displayed
+
+    //lable attributes - array
+    'label_attr'   => [] // default is empty array
+
+    //template name
+    'template' => '' // default is whatever set in config
+
+    //custom wrapper prefix - can contain html
+    'prefix'   => '' // default is empty
+
+    //custom wrapper suffix - can contain html
+    'suffix'   => '' // default is empty
+
+    //field wrapper prefix - can contain html
+    'field_prefix'   => '' // default is empty
+
+    //field wrapper prefix - can contain html
+    'field_suffix'   => '' // default is empty
+
+    //wrapper - true/false
+    'wrapper'   => '' // default is true
+
+    //wrapper attributes - array
+    'wrapper_attr'   => [] // default is empty array
+
+    //show error blocks or not - true/flase
+    'show_errors'   => '' // default is true
+
+    //error attributes - array
+    'error_attr'   => [] // default is empty array
+
+    //help block
+    'help_block'   => [
+        'text' => '' // default is empty
+        'attr' => [] // default is empty array
+    ]
+
+]
+```
