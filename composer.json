@@ -1,6 +1,9 @@
 {
     "name": "karan/laform",
     "description": "Laravel form builder",
+    "keywords": [
+        "forms","field","laravel","bootstrap"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -21,7 +24,5 @@
         "classmap": [
 
         ]
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
