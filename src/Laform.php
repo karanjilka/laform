@@ -64,11 +64,19 @@ class Laform
         $options['label_attr'] = isset($options['label_attr']) ? $options['label_attr'] : [];
         $options['attr'] = isset($options['attr']) ? $options['attr'] : [];
 
-        $options['wrapper_attr'] = $this->defaultAttr($options['wrapper_attr'], 'class', 'wrapper_class');
-        $options['error_attr'] = $this->defaultAttr($options['error_attr'], 'class', 'error_class');
-        $options['help_block']['attr'] = $this->defaultAttr($options['help_block']['attr'], 'class', 'help_block_class');
-        $options['label_attr'] = $this->defaultAttr($options['label_attr'], 'class', 'label_class');
-        $options['attr'] = $this->defaultAttr($options['attr'], 'class', 'field_class');
+        if(!isset($options['plain'])){
+            $options['wrapper_attr'] = $this->defaultAttr($options['wrapper_attr'], 'class', 'wrapper_class');
+            $options['error_attr'] = $this->defaultAttr($options['error_attr'], 'class', 'error_class');
+            $options['help_block']['attr'] = $this->defaultAttr($options['help_block']['attr'], 'class', 'help_block_class');
+            $options['label_attr'] = $this->defaultAttr($options['label_attr'], 'class', 'label_class');
+            $options['attr'] = $this->defaultAttr($options['attr'], 'class', 'field_class');
+        }else{
+            $options['wrapper_attr']['class'] = '';
+            $options['error_attr']['class'] = '';
+            $options['help_block']['attr']['class'] = '';
+            $options['label_attr']['class'] = '';
+            $options['attr']['class'] = '';
+        }
 
         return $options;
     }
