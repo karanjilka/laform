@@ -56,16 +56,13 @@ Examples
     'attr' => [] // default is empty array
 
     //lable text - string
-    'label'   => '' // no default value, if not set label will not be displayed
+    'lable'   => '' // no default value, if not set lavle will not be displayed
 
     //lable attributes - array
     'label_attr'   => [] // default is empty array
 
     //template name
     'template' => '' // default is whatever set in config
-
-    //plain - true/false
-    'plain' => true // if set to true then it will ignore the config default class. default is false
 
     //custom wrapper prefix - can contain html
     'prefix'   => '' // default is empty

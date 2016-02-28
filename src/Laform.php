@@ -30,7 +30,7 @@ class Laform
     {
         $fields = config('laform.fields');
         $inputFields = config('laform.input_feilds');
-        $options = $this->options($options);
+        $options = $this->options($name,$type,$options);
         if (in_array($type, $inputFields)) {
             $class = $fields['input'];
             $field = new $class();
@@ -47,13 +47,15 @@ class Laform
         }
     }
 
-    protected function options($options)
+    protected function options($name,$type,$options)
     {
         $options['template'] = isset($options['template']) ? $options['template'] : config('laform.default_template');
         $options['prefix'] = isset($options['prefix']) ? $options['prefix'] : '';
         $options['suffix'] = isset($options['suffix']) ? $options['suffix'] : '';
         $options['field_prefix'] = isset($options['field_prefix']) ? $options['field_prefix'] : '';
         $options['field_suffix'] = isset($options['field_suffix']) ? $options['field_suffix'] : '';
+
+        $options['error_message_name']=isset($options['error_message_name'])?$options['error_message_name']:$name;
 
         $options['wrapper'] = isset($options['wrapper']) ? $options['wrapper'] : true;
         $options['value'] = isset($options['value']) ? $options['value'] : null;
